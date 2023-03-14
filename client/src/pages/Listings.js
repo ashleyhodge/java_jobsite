@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BsSearch } from 'react-icons/bs';
+import { Link } from "react-router-dom";
 
 const Listings = () => {
 
@@ -47,9 +48,15 @@ const Listings = () => {
   return (
     <div className="m-5">
       <h1 className="font-bold text-center text-[32px] text-gray-600">Current Openings</h1>
-      <div className="flex justify-end items-center">
-        <input className="border-2 rounded-md px-1" type='text' placeholder="Search" onChange={(e) => setSearch(e.target.value)} onKeyUp={handleKeyUp}/>
-        <BsSearch size={28} className="border-2 rounded-md m-1 p-1 " onClick={() => searchPosts()} />
+      <div className="flex justify-between items-center">
+        <div>
+          <Link to='/newlisting' className="text-gray-600 hover:text-gray-500">Add New Listing</Link>
+        </div>
+        <div className="flex items-center">
+          <input className="border-2 rounded-md px-1" type='text' placeholder="Search" onChange={(e) => setSearch(e.target.value)} onKeyUp={handleKeyUp}/>
+          <BsSearch size={28} className="border-2 rounded-md m-1 p-1 " onClick={() => searchPosts()} />
+        </div>
+        
       </div>
       
       <div className="grid grid-cols-3 gap-5">
