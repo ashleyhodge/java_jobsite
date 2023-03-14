@@ -25,7 +25,7 @@ public class PostController {
     response.sendRedirect("/swagger-ui.html");
   }
   @CrossOrigin
-  @GetMapping("/allPosts")
+  @GetMapping("/posts")
   public List<Post> getAllPosts() {
     return repo.findAll();
   }
