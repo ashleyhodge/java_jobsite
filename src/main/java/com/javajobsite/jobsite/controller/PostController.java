@@ -13,13 +13,14 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api")
 public class PostController {
   @Autowired
   PostRepository repo;
   @Autowired
   searchRepository srepo;
   @ApiIgnore
-  @RequestMapping(value = "/")
+
   public void redirect(HttpServletResponse response) throws IOException {
     response.sendRedirect("/swagger-ui.html");
   }
