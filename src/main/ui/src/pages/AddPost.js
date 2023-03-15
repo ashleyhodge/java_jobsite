@@ -27,7 +27,7 @@ const AddPost = () => {
       },
       body: JSON.stringify(form)
     })
-    setForm(initial)..
+    setForm(initial)
     
     navigate('/');
   }
