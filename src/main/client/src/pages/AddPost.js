@@ -27,7 +27,8 @@ const AddPost = () => {
       },
       body: JSON.stringify(form)
     })
-    setForm(initial)
+    setForm(initial)..
+    
     navigate('/');
   }
 
@@ -37,9 +38,9 @@ const AddPost = () => {
     setForm({...form , techs : [...form.techs, e.target.value]});
   }
 
-  const handleOther = (e) => {
-      skills.push(e.target.other)
-  }
+  // const handleOther = (e) => {
+  //     skills.push(e.target.other)
+  // }
   return(
     <div className="m-5">
     <h1 className="text-center font-bold text-gray-600 text-[32px]">Create New Listing</h1>
