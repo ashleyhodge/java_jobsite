@@ -113,7 +113,7 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>${npm.executable}</executable>
+							<executable>npm.cmd</executable>
 							<arguments>
 								<argument>install</argument>
 								<argument>gulp</argument>
