@@ -33,7 +33,6 @@ const Listings = () => {
     }
   }
 
-
   useEffect(() => {
     setLoading(true)
     
